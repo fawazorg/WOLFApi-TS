@@ -1,7 +1,7 @@
 {
-  "name": "wolfapi-ts",
+  "name": "wolf-live-api",
   "version": "1.2.4",
-  "description": "A Typescript WOLF API",
+  "description": "A Typescript WOLF API, A CLONE FORM Masamesa' PAKEGE",
   "main": "dist/WOLF-TS.node.min.js",
   "files": [
     "dist/WOLF-TS.node.min.js",
@@ -41,6 +41,6 @@
     "Palringo",
     "API"
   ],
-  "author": "Masamesa",
+  "author": "Fawazorg",
   "license": "MIT"
 }
