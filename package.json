@@ -1,5 +1,5 @@
 {
-  "name": "wolf-live-api",
+  "name": "@fawazorg/wolf.js",
   "version": "1.2.5",
   "description": "A Typescript WOLF API, A CLONE FORM Masamesa' PAKEGE",
   "main": "dist/WOLF-TS.node.min.js",
@@ -30,7 +30,7 @@
   "scripts": {
     "build": "npm run build-web && npm run build-node",
     "watch": "webpack --watch --color --progress --config ./webpack-web.config.js",
-    "publish-npm": "npm run build && npm version patch && npm publish",
+    "publish-npm": "npm run build && npm version patch && npm publish --access=public",
     "build-web": "webpack --progress --color --config ./webpack-web.config.js",
     "build-node": "webpack --progress --color --config ./webpack-node.config.js",
     "build-test": "webpack --progress --color --config ./webpack-test.config.js",
