@@ -8,13 +8,10 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "declaration": true,
-    "lib": [
-      "es2015",
-      "DOM"
-    ],
+    "lib": ["es2015", "DOM"],
     "outDir": "./typings",
     "allowUnreachableCode": true,
-    "types": [ "node", "socket.io-client" ],
+    "types": ["node", "socket.io-client"],
     "typeRoots": ["./node_modules/@types"],
     "experimentalDecorators": true
   },
