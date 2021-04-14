@@ -1,4 +1,4 @@
-export enum LookingFor{
+export enum LookingFor {
     nothing = 0,
 
     freindship = 1,
@@ -19,10 +19,10 @@ export enum LookingFor{
 
     datingRelationshipNetworking = 14,
 
-    friendshipDatingRelationshipNetworking = 15
+    friendshipDatingRelationshipNetworking = 15,
 }
 
-export enum RelationshipStatus{
+export enum RelationshipStatus {
     notspecified = null,
 
     single = 1,
@@ -35,39 +35,36 @@ export enum RelationshipStatus{
 
     itsComplicated = 5,
 
-    inAnOpenRelationship = 6
+    inAnOpenRelationship = 6,
 }
 
-export enum Gender{
+export enum Gender {
     unspecified = null,
-    
+
     male = 1,
-    
-    female = 2
+
+    female = 2,
 }
 
-export enum NewsType{
+export enum NewsType {
     WOLF = 0,
 
     Account = 1,
 
-    Favorite = 2
+    Favorite = 2,
 }
 
-export const enum OnlineState{
-
+export const enum OnlineState {
     Online = 1,
 
     Away = 2,
 
     Busy = 5,
 
-    Invisible = 3
-
+    Invisible = 3,
 }
 
-export enum Privilege{
-
+export enum Privilege {
     PremiumAccountHolder = 1 << 20,
 
     Volunteer = 1 << 9,
@@ -87,17 +84,15 @@ export enum Privilege{
     EliteClubTwo = 1 << 17,
 
     EliteClubThree = 1 << 22,
-    
+
     SelectClubOne = 1 << 4,
 
     SelectClubTwo = 1 << 10,
 
-    ShadowBanned = 1 << 30
-
+    ShadowBanned = 1 << 30,
 }
 
-export const enum DeviceType
-{
+export const enum DeviceType {
     Unknown = 0,
 
     Bot = 1,
@@ -114,13 +109,12 @@ export const enum DeviceType
 
     iPad = 6,
 
-    Web = 8, 
+    Web = 8,
 
-    WindowsPhone7 = 9
+    WindowsPhone7 = 9,
 }
 
-
-export const enum Language{
+export const enum Language {
     english = 1,
 
     dutch = 3,
@@ -137,7 +131,7 @@ export const enum Language{
 
     italian = 13,
 
-    arabic = 14, 
+    arabic = 14,
 
     persian = 15,
 
@@ -153,7 +147,7 @@ export const enum Language{
 
     slovak = 21,
 
-    czech = 22, 
+    czech = 22,
 
     danish = 24,
 
@@ -191,31 +185,31 @@ export const enum Language{
 
     ukrainian = 44,
 
-    bulgarian = 45
+    bulgarian = 45,
 }
 
-export const enum AdminActionTypes{
-        Reset = 0,
-        Admin = 1,
-        Mod = 2,
-        Ban = 4,
-        Silence = 8,
-        Kick = 16,
-        Join = 17,
-        Leave = 18
-    }
+export const enum AdminActionTypes {
+    Reset = 0,
+    Admin = 1,
+    Mod = 2,
+    Ban = 4,
+    Silence = 8,
+    Kick = 16,
+    Join = 17,
+    Leave = 18,
+}
 
 export enum Role {
-        User = 0,
-        Admin = 1,
-        Mod = 2,
-        Banned = 4,
-        Silenced = 8,
-        kicked = 16,
-        Owner = 32
-    }
+    User = 0,
+    Admin = 1,
+    Mod = 2,
+    Banned = 4,
+    Silenced = 8,
+    kicked = 16,
+    Owner = 32,
+}
 
-export enum GroupType{
+export enum GroupType {
     id = 0,
-    name = 1
+    name = 1,
 }

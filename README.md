@@ -1,11 +1,6 @@
-# WOLFApi-TS
-An unofficial api for WOLF instant messaging platform
+# Wolf.js
+
+An unofficial api for WOLF instant messaging platform, this version is clone from (https://github.com/masamesa/WOLFApi-TS)
 
 NPM installation:
-```npm i wolfapi-ts```
-
-Project example: 
-https://github.com/masamesa/wolfexample
-
-Showcase of all the features currently added in the api:
-https://github.com/masamesa/WOLFApi-TS/blob/master/Example/test.ts
+`npm i @fawazorg/wolf.js`

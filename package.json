@@ -1,7 +1,7 @@
 {
   "name": "@fawazorg/wolf.js",
   "version": "1.2.7",
-  "description": "A Typescript WOLF API, A CLONE FORM Masamesa' PAKEGE",
+  "description": "A Typescript WOLF API, A CLONE FORM Masamesa's packge.",
   "main": "dist/WOLF-TS.node.min.js",
   "files": [
     "dist/WOLF-TS.node.min.js",

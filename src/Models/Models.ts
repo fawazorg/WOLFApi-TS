@@ -1,9 +1,9 @@
 //a few things are stolen from calico-crusade's palringoapi-ts, I don't see a better way to do this, it's just a packet response model afterall.
 //https://github.com/calico-crusade/palringoapi-ts/blob/75fd0626566d4c3db0cbb60d40b5192e815f1fec/library/src/Subprofile/Subprofile.ts
-import {Role, LookingFor, Gender, RelationshipStatus, Language, DeviceType, NewsType} from '../Types/Types'
+import { Role, LookingFor, Gender, RelationshipStatus, Language, DeviceType, NewsType } from "../Types/Types";
 declare var TextDecoder: any;
 
-export class StageInfo{
+export class StageInfo {
     id: number;
     locked: boolean;
     occupierId: number;
@@ -12,7 +12,7 @@ export class StageInfo{
     connctionState: string;
 }
 
-export class AdminActionResult{
+export class AdminActionResult {
     sucess: boolean;
     noPower: boolean;
     insufficientPower: boolean;
@@ -22,7 +22,7 @@ export class AdminActionResult{
     unknownReason: boolean;
 }
 
-export class GroupActionResult{
+export class GroupActionResult {
     sucess: boolean;
     higherlevel: boolean;
     groupisfull: boolean;
@@ -38,7 +38,7 @@ export class GroupActionResult{
     unknownerror: boolean;
 }
 
-export class MethodResult{
+export class MethodResult {
     type: AdminActionResult | GroupActionResult;
     result: boolean;
 }
@@ -49,7 +49,7 @@ export class GroupMember {
     capabilities: Role;
     sort: {
         nickname: string;
-        onlineState: (0 | 1);
+        onlineState: 0 | 1;
     };
 }
 
@@ -74,7 +74,7 @@ export interface ExpiredCharms {
     expireTime: Date;
 }
 
-export interface CharmStats{
+export interface CharmStats {
     subscriberId: number;
     totalLifetime: number;
     totalGiftedSent: number;
@@ -83,34 +83,33 @@ export interface CharmStats{
     totalExpired: number;
 }
 
-
-export class Welcome{
+export class Welcome {
     ip?: string;
     country?: string;
     token?: string;
-    endpointConfig?:{
+    endpointConfig?: {
         avatarEndpoint?: string;
         mmsUploadEndpoint?: string;
-        banner?:{
-            notification?:{
+        banner?: {
+            notification?: {
                 en?: string;
                 ar?: string;
-            },
-            promotion?:{
+            };
+            promotion?: {
                 en?: string;
                 ar?: string;
-            }
-        }
-    }
+            };
+        };
+    };
 }
 //all flags in user and extended user are set to nullable
 //so the end user can use the models as a basis to edit his or her profile.
-export class ClientModel{
-    cognito?:{
+export class ClientModel {
+    cognito?: {
         identity?: string;
         token?: string;
-    }
-    subscriber?:{
+    };
+    subscriber?: {
         id?: number;
         hash?: string;
         privileges?: number;
@@ -126,12 +125,12 @@ export class ClientModel{
         contactListAuthState?: any;
         charms?: SelectedList[];
         email?: string;
-    }
+    };
     isNew?: boolean;
 }
 
 export class ExtendedClient extends ClientModel {
-    extended?:{
+    extended?: {
         language?: Language;
         urls?: string[];
         lookingFor?: LookingFor | number;
@@ -153,7 +152,7 @@ export class ExtendedClient extends ClientModel {
         relationshipStatus?: RelationshipStatus | number;
         sex?: Gender | number;
         name?: string;
-    }
+    };
     isStaff?: boolean;
     isVolunteer?: boolean;
     isAgent?: boolean;
@@ -170,7 +169,7 @@ export class ExtendedClient extends ClientModel {
     avatar?: string;
 }
 
-export class User{
+export class User {
     id?: number;
     hash?: string;
     privileges?: number;
@@ -188,7 +187,7 @@ export class User{
     email?: string;
 }
 export class ExtendedUser extends User {
-    extended?:{
+    extended?: {
         language?: Language;
         urls?: string[];
         lookingFor?: LookingFor | number;
@@ -210,7 +209,7 @@ export class ExtendedUser extends User {
         relationshipStatus?: RelationshipStatus | number;
         sex?: Gender | number;
         name?: string;
-    }
+    };
     isStaff?: boolean;
     isVolunteer?: boolean;
     isAgent?: boolean;
@@ -227,7 +226,7 @@ export class ExtendedUser extends User {
     avatar?: string;
 }
 
-export class CGroup{
+export class CGroup {
     name?: string;
     description?: string;
     extended?: {
@@ -236,7 +235,7 @@ export class CGroup{
         entryLevel?: number;
         discoverable?: boolean;
         advancedAdmin?: boolean;
-    }
+    };
     password?: string;
     peekable?: boolean;
 }
@@ -245,8 +244,8 @@ export class Group {
     id: number;
     name: string;
     hash: string;
-    description: string
-    reputation: number;;
+    description: string;
+    reputation: number;
     premium: boolean;
     members: number;
     offical: boolean;
@@ -261,11 +260,10 @@ export class ExtendedGroup extends Group {
     questionable: boolean;
     entryLevel: number;
     passworded: boolean;
-    language: Language
+    language: Language;
 }
 
-
-export interface Achievements{
+export interface Achievements {
     id: number;
     typeId: number;
     parentId: number;
@@ -290,18 +288,18 @@ export interface Achievements{
     }[];
 }
 
-export interface UserAchievements{
+export interface UserAchievements {
     acheievementId: number;
     updateTime: Date;
 }
 
-export interface GroupStatistics{
+export interface GroupStatistics {
     id: number;
     name: string;
     owner: {
         subId: number;
         level: number;
-        nickname: string
+        nickname: string;
     };
     wordCount: number;
     textCount: number;
@@ -317,15 +315,15 @@ export interface GroupStatistics{
     packCount: number;
     spokenCount: number;
     memberCount: number;
-    trendsHour:{
+    trendsHour: {
         hour: number;
         lineCount: number;
     }[];
-    trendsDay:{
+    trendsDay: {
         day: number;
         lineCount: number;
     }[];
-    trends:{
+    trends: {
         day: number;
         lineCount: number;
     }[];
@@ -342,7 +340,7 @@ export interface GroupStatistics{
     topAction: TopPhrases[];
 }
 
-export interface Top{
+export interface Top {
     groupId: number;
     wordCount: number;
     lineCount: number;
@@ -362,7 +360,7 @@ export interface Top{
     message: string;
 }
 
-export interface TopPhrases{
+export interface TopPhrases {
     subId: number;
     value: number;
     percentage: number;
@@ -397,8 +395,7 @@ export class Message {
     text: string;
 
     constructor(msg?: IMessage) {
-        if (!msg)
-            return;
+        if (!msg) return;
 
         this.id = msg.id;
         this.isGroup = msg.isGroup;
@@ -407,12 +404,12 @@ export class Message {
         this.recipient = msg.recipient;
         this.data = msg.data;
 
-        this.isImage = msg.mimeType == ('text/image_link' || 'image/jpeg');
-        this.isText = msg.mimeType == 'text/plain';
-        this.isVoice = msg.mimeType == ('audio/x-speex' || 'text/voice_link');
-        this.isHtml = msg.mimeType == 'text/html';
+        this.isImage = msg.mimeType == ("text/image_link" || "image/jpeg");
+        this.isText = msg.mimeType == "text/plain";
+        this.isVoice = msg.mimeType == ("audio/x-speex" || "text/voice_link");
+        this.isHtml = msg.mimeType == "text/html";
 
-        if (msg.mimeType != 'audio/x-speex') {
+        if (msg.mimeType != "audio/x-speex") {
             this.text = new TextDecoder().decode(this.data);
         }
     }
@@ -439,7 +436,7 @@ export interface IHistoricalMessageMetadata {
     isSpam?: boolean;
 }
 
-export interface IHistoricalMessage{
+export interface IHistoricalMessage {
     id: string;
     isGroup: boolean;
     originator: IIdHash | number;
@@ -450,15 +447,15 @@ export interface IHistoricalMessage{
     data: ArrayBuffer;
 }
 
-export interface Notifications{
+export interface Notifications {
     id: number;
     type: number;
     title: string;
-    message:string;
+    message: string;
     link: string;
     startAt: Date;
     endAt: Date;
-    global: boolean,
+    global: boolean;
     imageUrl: string;
     layoutType: number; //seems to be a type, unsure what the types are, but typically always 1.
     newsStreamType: NewsType;
@@ -467,7 +464,7 @@ export interface Notifications{
     favourite: boolean;
 }
 
-export interface TopicList{
+export interface TopicList {
     type: string;
     title: string;
     layout: string;

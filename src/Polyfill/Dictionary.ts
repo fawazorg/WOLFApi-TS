@@ -27,8 +27,7 @@ export class Dictionary<K, V> {
 
     get(key: K): V {
         var i = this.Keys.indexOf(key);
-        if (i === -1)
-            return null;
+        if (i === -1) return null;
         return this.Values[i];
     }
 
@@ -44,8 +43,8 @@ export class Dictionary<K, V> {
         return values;
     }
 
-    getBy(fn: (key: K, val?: V) => any) : V {
-        for(var i = 0; i < this.Keys.length; i++) {
+    getBy(fn: (key: K, val?: V) => any): V {
+        for (var i = 0; i < this.Keys.length; i++) {
             if (fn(this.Keys[i], this.Values[i])) {
                 return this.Values[i];
             }
@@ -55,7 +54,5 @@ export class Dictionary<K, V> {
 }
 
 export class KeyValuePair<K, V> {
-    constructor(public Key?: K, public Value?: V) {
-
-    }
+    constructor(public Key?: K, public Value?: V) {}
 }
